@@ -8,7 +8,7 @@
   *Vai trò: hỗ trợ xử lý dữ liệu, xây dựng mô hình LSTM*
 
   - 📊 Hệ thống FoodFast Delivery (làm chung nhóm 2 người)
-  (https://github.com/BaoTran019/foodfast-delivery-web.git)/n
+  (https://github.com/BaoTran019/foodfast-delivery-web.git)
   *Vai trò: layout & styling & hỗ trợ tạo diagrams*
 
 - 📫 Liên hệ: **dt9a318.longqt@gmail.com**
