@@ -1,0 +1,180 @@
+<mxfile host="65bd71144e">
+    <diagram id="8OWid82dktUkF3iNMXIr" name="Page-1">
+        <mxGraphModel dx="1840" dy="1528" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="244" value="" style="ellipse;html=1;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="160" y="120" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="245" value="" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;fontStyle=0" edge="1" parent="1" source="244">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="175" y="210" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="246" value="Main screen" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="125" y="210" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="247" value="Insert card [invalid card]" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="246" target="246">
+                    <mxGeometry x="0.1201" y="22" relative="1" as="geometry">
+                        <mxPoint x="310" y="230" as="targetPoint"/>
+                        <mxPoint x="340" y="220" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="200" y="190"/>
+                            <mxPoint x="250" y="190"/>
+                            <mxPoint x="250" y="220"/>
+                        </Array>
+                        <mxPoint x="-12" y="-20" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="248" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; float: none; display: inline !important;&quot;&gt;Insert card&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; float: none; display: inline !important;&quot;&gt;[valid card]&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="246" target="249">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="330" y="230" as="targetPoint"/>
+                        <mxPoint x="250" y="200" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="249" value="wait for PIN" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="210" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="250" value="wait for account verification" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="210" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="251" value="enter PIN code&lt;div&gt;&lt;br&gt;&lt;div&gt;bad PIN&lt;/div&gt;&lt;/div&gt;" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;startArrow=open;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="249" target="250">
+                    <mxGeometry y="30" relative="1" as="geometry">
+                        <mxPoint x="450" y="300" as="targetPoint"/>
+                        <mxPoint x="450" y="240" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="252" value="Cancel" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="340" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="253" value="user cancel action" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="249" target="252">
+                    <mxGeometry x="-0.1111" y="50" relative="1" as="geometry">
+                        <mxPoint x="320" y="280" as="targetPoint"/>
+                        <mxPoint x="320" y="220" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="254" value="wait for selecting services" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="340" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="255" value="account OK" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1">
+                    <mxGeometry x="-0.1111" y="50" relative="1" as="geometry">
+                        <mxPoint x="649.66" y="340" as="targetPoint"/>
+                        <mxPoint x="649.66" y="250" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="256" value="user cancel action" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="254" target="252">
+                    <mxGeometry y="-20" relative="1" as="geometry">
+                        <mxPoint x="580" y="440" as="targetPoint"/>
+                        <mxPoint x="580" y="350" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="257" value="operation cancel" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=0" edge="1" parent="1" source="252" target="246">
+                    <mxGeometry x="-0.4615" y="-30" relative="1" as="geometry">
+                        <mxPoint x="240" y="370" as="targetPoint"/>
+                        <mxPoint x="240" y="280" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="258" value="wait for entering amount" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="470" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="259" value="process transaction" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="470" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="260" value="select withdraw money" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1">
+                    <mxGeometry x="-0.1111" y="60" relative="1" as="geometry">
+                        <mxPoint x="649.66" y="470" as="targetPoint"/>
+                        <mxPoint x="649.66" y="380" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="261" value="user cancel action" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=0" edge="1" parent="1" source="258" target="252">
+                    <mxGeometry x="0.0168" y="-25" relative="1" as="geometry">
+                        <mxPoint x="670" y="630" as="targetPoint"/>
+                        <mxPoint x="670" y="540" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="262" value="enter amount" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="258">
+                    <mxGeometry x="0.0003" y="-20" relative="1" as="geometry">
+                        <mxPoint x="370" y="489.65999999999997" as="targetPoint"/>
+                        <mxPoint x="490" y="489.65999999999997" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="263" value="transaction success" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="259" target="246">
+                    <mxGeometry x="-0.5238" y="15" relative="1" as="geometry">
+                        <mxPoint x="170" y="290" as="targetPoint"/>
+                        <mxPoint x="330" y="360" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="175" y="490"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="264" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;State Diagram for ATM&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="370" y="520" width="190" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="265" value="" style="ellipse;html=1;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="190" y="670" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="266" value="" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" source="265" target="267">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="685" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="267" value="Check card type" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="665" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="268" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="670" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="269" value="reject [not a valid ATM card]" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" edge="1" parent="1" target="268">
+                    <mxGeometry x="0.0583" y="25" relative="1" as="geometry">
+                        <mxPoint x="480" y="684.71" as="targetPoint"/>
+                        <mxPoint x="400" y="684.71" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="270" value="Check card with bank consortium" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;rounded=1;absoluteArcSize=1;arcSize=50;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="255" y="780" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="271" value="OK [is a ATM card]" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="267" target="270">
+                    <mxGeometry x="-0.3333" y="-60" relative="1" as="geometry">
+                        <mxPoint x="410" y="710" as="targetPoint"/>
+                        <mxPoint x="330" y="710" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="272" value="reject [the card issuer bank not in&amp;nbsp;&lt;div&gt;the list of the bacnk consortium]&lt;/div&gt;" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="270" target="268">
+                    <mxGeometry x="-0.3456" y="40" relative="1" as="geometry">
+                        <mxPoint x="480" y="865" as="targetPoint"/>
+                        <mxPoint x="480" y="790" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="273" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="335" y="930" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="274" value="OK [the ATM card is valid]" style="endArrow=open;html=1;rounded=0;align=center;verticalAlign=top;endFill=0;labelBackgroundColor=none;endSize=6;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="270" target="273">
+                    <mxGeometry x="-0.2727" y="-70" relative="1" as="geometry">
+                        <mxPoint x="400" y="865" as="targetPoint"/>
+                        <mxPoint x="401" y="790" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="275" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;State Diagram for Card controller&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="240" y="970" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="276" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="60" width="810" height="980" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

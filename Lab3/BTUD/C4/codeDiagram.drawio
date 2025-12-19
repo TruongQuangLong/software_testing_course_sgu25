@@ -1,0 +1,141 @@
+<mxfile host="65bd71144e">
+    <diagram id="lfuVz_7HAx55wv0AOntX" name="Page-1">
+        <mxGraphModel dx="2773" dy="2037" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="BorrowController&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;+ BorrowBook(bookId, userId): BorrowResult&lt;br&gt;+ ReturnBook(borrowingId): ReturnResult&lt;br&gt;+ ExtendBorrowing(borrowingId): ExtendResult&lt;br&gt;+ GetBorrowingHistory(userId): List&lt;br&gt;+ GetOverdueBooks(): List&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="50" width="200" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="BorrowService&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;+ ProcessBorrowRequest(request): BorrowResult&lt;br&gt;+ ProcessReturnRequest(request): ReturnResult&lt;br&gt;+ ProcessExtendRequest(request): ExtendResult&lt;br&gt;+ ValidateBorrowingRules(book, user): ValidationResult&lt;br&gt;+ CalculateOverdueFee(borrowing): decimal&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="66" width="200" height="224" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Book&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;- Id: int&lt;br&gt;- Title: string&lt;br&gt;- Author: string&lt;br&gt;- ISBN: string&lt;br&gt;- Status: BookStatus&lt;br&gt;- AvailableCopies: int&lt;br&gt;&lt;br&gt;+ IsAvailable(): bool&lt;br&gt;+ ReserveCopy(): void&lt;br&gt;+ ReleaseCopy(): void&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="400" width="180" height="185" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Borrowing&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;- Id: int&lt;br&gt;- BookId: int&lt;br&gt;- UserId: int&lt;br&gt;- BorrowDate: DateTime&lt;br&gt;- DueDate: DateTime&lt;br&gt;- ReturnDate: DateTime?&lt;br&gt;- Status: BorrowingStatus&lt;br&gt;- OverdueFee: decimal&lt;br&gt;&lt;br&gt;+ IsOverdue(): bool&lt;br&gt;+ CalculateOverdueFee(): decimal&lt;br&gt;+ Extend(days): void&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="419" width="180" height="221" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="User&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;- Id: int&lt;br&gt;- Name: string&lt;br&gt;- Email: string&lt;br&gt;- MembershipType: MembershipType&lt;br&gt;- MaxBorrowLimit: int&lt;br&gt;- CurrentBorrowedCount: int&lt;br&gt;&lt;br&gt;+ CanBorrowMore(): bool&lt;br&gt;+ HasOverdueBooks(): bool&lt;br&gt;+ GetBorrowingHistory(): List&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="544" y="419" width="180" height="218" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="IBookRepository&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;+ GetById(id): Book&lt;br&gt;+ GetAvailableBooks(): List&lt;br&gt;+ SearchBooks(criteria): List&lt;br&gt;+ Update(book): void&lt;br&gt;+ SaveChanges(): void&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="104" y="710" width="180" height="166" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="IBorrowingRepository&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;+ GetById(id): Borrowing&lt;br&gt;+ GetByUserId(userId): List&lt;br&gt;+ GetOverdueBorrowings(): List&lt;br&gt;+ Add(borrowing): void&lt;br&gt;+ Update(borrowing): void&lt;br&gt;+ SaveChanges(): void&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="324" y="713" width="180" height="166" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;b&gt;IUserRepository&lt;/b&gt;&lt;br&gt;&lt;br&gt;+ GetById(id): User&lt;br&gt;+ GetByEmail(email): User&lt;br&gt;+ Update(user): void&lt;br&gt;+ SaveChanges(): void" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="544" y="713" width="180" height="146" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="BookRepository&lt;br&gt;[Entity Framework]&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;+ GetById(id): Book&lt;br&gt;+ GetAvailableBooks(): List&lt;br&gt;+ SearchBooks(criteria): List&lt;br&gt;+ Update(book): void&lt;br&gt;+ SaveChanges(): void&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="104" y="920" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="BorrowingRepository&lt;br&gt;[Entity Framework]&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;+ GetById(id): Borrowing&lt;br&gt;+ GetByUserId(userId): List&lt;br&gt;+ GetOverdueBorrowings(): List&lt;br&gt;+ Add(borrowing): void&lt;br&gt;+ Update(borrowing): void&lt;br&gt;+ SaveChanges(): void&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="324" y="930" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="UserRepository&lt;br&gt;[Entity Framework]&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;+ GetById(id): User&lt;br&gt;+ GetByEmail(email): User&lt;br&gt;+ Update(user): void&lt;br&gt;+ SaveChanges(): void&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="544" y="930" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Database&#xa;[PostgreSQL]&#xa;&#xa;Books Table&#xa;Borrowings Table&#xa;Users Table" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="324" y="1120" width="181" height="137" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Sử dụng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" target="5">
+                    <mxGeometry x="0.0004" relative="1" as="geometry">
+                        <mxPoint x="300" y="130" as="sourcePoint"/>
+                        <mxPoint x="400" y="230" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="350" y="131"/>
+                            <mxPoint x="350" y="233"/>
+                            <mxPoint x="460" y="233"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="Sử dụng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry x="0.6057" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="410" y="178"/>
+                            <mxPoint x="410" y="280"/>
+                            <mxPoint x="190" y="280"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Sử dụng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="5" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Sử dụng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="5" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Sử dụng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="5" target="9">
+                    <mxGeometry x="0.7699" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="500" y="320"/>
+                            <mxPoint x="80" y="320"/>
+                            <mxPoint x="80" y="670"/>
+                            <mxPoint x="194" y="670"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Sử dụng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="5" target="10">
+                    <mxGeometry x="0.7028" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="500" y="330"/>
+                            <mxPoint x="290" y="330"/>
+                            <mxPoint x="290" y="670"/>
+                            <mxPoint x="414" y="670"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="Sử dụng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="5" target="11">
+                    <mxGeometry x="0.6735" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="527" y="670"/>
+                            <mxPoint x="634" y="670"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="Implements" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;dashed=1;" edge="1" parent="1" source="9" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Implements" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;dashed=1;" edge="1" parent="1" source="10" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Implements" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#666666;strokeWidth=2;dashed=1;" edge="1" parent="1" source="11" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Đọc/Ghi [SQL]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="12" target="15">
+                    <mxGeometry x="-0.1614" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="194" y="1100"/>
+                            <mxPoint x="414" y="1100"/>
+                        </Array>
+                        <mxPoint x="220" y="1190" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="Đọc/Ghi [SQL]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="13" target="15">
+                    <mxGeometry x="-0.4286" relative="1" as="geometry">
+                        <Array as="points"/>
+                        <mxPoint x="437" y="1250" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="28" value="Đọc/Ghi [SQL]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="14" target="15">
+                    <mxGeometry x="0.1075" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="634" y="1100"/>
+                            <mxPoint x="415" y="1100"/>
+                        </Array>
+                        <mxPoint x="488" y="1212" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
